@@ -1,0 +1,152 @@
+﻿@model front_end_demo.Models.metaFactTest1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>metaFactTest1</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.filter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.filter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fileRoot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fileRoot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RootReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RootReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.securityClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.securityClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.businessClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.businessClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.filePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.filePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mimeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mimeType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MD5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MD5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailNew)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailNew)
+        </dd>
+
+    </dl>
+
+    <table class="table">
+        <tr>
+            <th>
+                HasFiles
+            </th>
+            <th>
+                HasArms
+            </th>
+            <th>
+                HasLegs
+            </th>
+        </tr>
+
+        @foreach (var item in Model.fileName)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item)
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

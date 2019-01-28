@@ -1,0 +1,114 @@
+﻿@model front_end_demo.Models.total
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>total</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.totalFiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalFiles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalRemediated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalRemediated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.percentRemedited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.percentRemedited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PII)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PII)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPEC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPEC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Public)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Public)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Internal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Internal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassifiedSen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassifiedSen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secret)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

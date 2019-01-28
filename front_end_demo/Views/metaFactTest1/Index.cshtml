@@ -1,0 +1,112 @@
+﻿@model IEnumerable<front_end_demo.Models.metaFactTest1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>
+    @Html.ActionLink("List of files", "Index", "metaFactTest1")<br />
+    @Html.ActionLink("List of totals", "Index", "Totals")<br />
+    @Html.ActionLink("List of users", "Index", "userInfos")
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.filter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fileRoot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RootReference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.securityClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.businessClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.filePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mimeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MD5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailNew)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.filter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fileRoot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RootReference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.securityClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.businessClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.filePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.extension)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mimeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MD5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailNew)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UID })
+        </td>
+    </tr>
+}
+
+</table>

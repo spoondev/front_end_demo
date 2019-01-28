@@ -1,0 +1,99 @@
+﻿@model IEnumerable<front_end_demo.Models.total>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.totalFiles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalRemediated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.percentRemedited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PII)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PCI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPEC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Public)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Internal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Classified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassifiedSen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secret)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalFiles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalRemediated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.percentRemedited)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PII)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PCI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPEC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Public)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Internal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Classified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassifiedSen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secret)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UID })
+        </td>
+    </tr>
+}
+
+</table>
